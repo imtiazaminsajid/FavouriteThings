@@ -18,7 +18,7 @@ public class Movie {
 
     }
 
-    public Movie(String name, String year, String about) {
+    public Movie(int id, String name, String year, String about) {
     }
 
     public int getMovieID() {
@@ -29,7 +29,7 @@ public class Movie {
         this.movieID = movieID;
     }
 
-    public Movie(String movieName, String movieYear) {
+    public Movie(String name, String movieName, String movieYear) {
         this.movieName = movieName;
         this.movieYear = movieYear;
     }

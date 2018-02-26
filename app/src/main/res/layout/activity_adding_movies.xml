@@ -5,42 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.imtiazaminsajid.favouritethings.MainActivity">
+    tools:context="com.example.imtiazaminsajid.favouritethings.AddingMovies">
 
-    <Button
-        android:id="@+id/movies"
+    <EditText
+        android:id="@+id/movieNameET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Movies"
-        android:onClick="movies"
-        />
-    <Button
-        android:id="@+id/food"
+        android:hint="Enter Movie Name"/>
+    <EditText
+        android:id="@+id/movieYearET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Food"
-        android:onClick="food"
-        />
-    <Button
-        android:id="@+id/place"
+        android:hint="Enter Release Year"/>
+    <EditText
+        android:id="@+id/movieAboutET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Place"
-        android:onClick="place"
-        />
+        android:hint="About Movie"/>
     <Button
-        android:id="@+id/songs"
+        android:id="@+id/addMovieBT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Songs"
-        android:onClick="songs"
-        />
+        android:onClick="addMovie"
+        android:text="Add movie"/>
     <Button
-        android:id="@+id/books"
+        android:id="@+id/listMovieBT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Books"
-        android:onClick="books"
-        />
-
+        android:onClick="movieList"
+        android:text="movie list"/>
 </LinearLayout>

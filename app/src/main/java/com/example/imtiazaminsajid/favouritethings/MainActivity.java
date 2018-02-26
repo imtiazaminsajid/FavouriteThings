@@ -9,10 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    EditText nameET, yearET, aboutET;
-    Button addMovie, listMovie;
-    private Movie movie;
-    MovieDatabaseSource movieDatabaseSource;
+    Button movie, food, songs, place, books;
 
 
     @Override
@@ -20,38 +17,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        nameET = findViewById(R.id.movieNameET);
-        yearET = findViewById(R.id.movieYearET);
-        aboutET = findViewById(R.id.movieAboutET);
-        addMovie = findViewById(R.id.addMovieBT);
-        listMovie = findViewById(R.id.listMovieBT);
-        movieDatabaseSource = new MovieDatabaseSource(this);
+        movie = findViewById(R.id.movies);
+        food = findViewById(R.id.food);
+        songs = findViewById(R.id.songs);
+        place = findViewById(R.id.place);
+        books = findViewById(R.id.books);
+
+
     }
 
-    public void addMovie(View view) {
-        String name = nameET.getText().toString();
-        String year = yearET.getText().toString();
-        String about = aboutET.getText().toString();
-        if(name.isEmpty()){
-            nameET.setError("This Fild Must Not Be Empty");
-        } else if (year.isEmpty()){
-            yearET.setError("This Fild Must Not Be Empty");
-        }
-        else if (about.isEmpty()){
-            aboutET.setError("This Fild Must Not Be Empty");
-        }else {
-            movie = new Movie(name,year,about);
-            boolean status = movieDatabaseSource.addMovie(movie);
-            if(status){
-                Toast.makeText(this, "Successfully Added", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, MovieListActivity.class));
-            }else {
-                Toast.makeText(this, "Could Not Save", Toast.LENGTH_SHORT).show();
-            }
-        }
+
+    public void movies(View view) {
+        startActivity(new Intent(MainActivity.this, AddingMovies.class));
     }
 
-    public void movieList(View view) {
-        startActivity(new Intent(MainActivity.this, MovieListActivity.class));
+    public void food(View view) {
+    }
+
+    public void place(View view) {
+    }
+
+    public void songs(View view) {
+    }
+
+    public void books(View view) {
     }
 }
